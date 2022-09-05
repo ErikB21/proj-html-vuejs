@@ -1,12 +1,12 @@
 <template>
-    <section class="d-flex justify-content-between">
+    <ul class="d-flex justify-content-between list-unstyled">
         <li class="px-2" v-for="login in logins" :key="login.id">
             <a class="text-decoration-none text-dark" href="#">
                 <i :class="login.icon"></i>
                 <span class="ps-2">{{login.link}}</span>
             </a>
         </li>
-    </section>
+    </ul>
 </template>
 
 <script>

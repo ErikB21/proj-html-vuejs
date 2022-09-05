@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <NavHeader/>
+    <MainContent/>
   </div>
 </template>
 
 <script>
 import NavHeader from './components/NavHeader.vue';
+import MainContent from './components/MainContent.vue';
 
 export default {
   name: 'App',
   components: {
-    NavHeader
+    NavHeader,
+    MainContent
 }
 }
 </script>

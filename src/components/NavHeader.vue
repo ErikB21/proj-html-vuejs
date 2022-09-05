@@ -41,9 +41,7 @@
                 <span class="bg-primary input-group-text"><i class="fa-solid fa-search text-white"></i></span>
             </div>
             <div class="list d-flex align-items-center">
-                <ul class="list-unstyled">
-                    <ListLogin/>
-                </ul>
+                <ListLogin/>
             </div>
             <div class="d-flex align-items-center">
                 <button class="btn btn-primary mb-3 mx-4">SIGN-UP</button>
