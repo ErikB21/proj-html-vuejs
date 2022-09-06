@@ -1,15 +1,22 @@
 <template>
     <section class="px-1 pb-4 eb_width_section m-auto d-flex justify-content-between">
-        <div v-for="card in cards" :key="card.id" class="rotate-diagonal-1 col-4 eb_card px-5 py-2">
-            <i :class="['fa-solid', 'fa-3x', card.icon]" class="pt-2" ></i>
-            <h5 class="pt-2">{{card.title}}</h5>
-            <p class="pt-2">{{card.paragraph}}</p>
-            <div class="d-none eb_card">
-                <img :src="card.img" :alt="card.subtitle">
+        <div class="box" v-for="card in cards" :key="card.id">
+            <div class="body">
+                <div class="imgContainer">
+                    <img :src="card.img" :alt="card.subtitle">
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <i :class="['fa-solid', 'fa-3x', card.icon]" class="pt-2" ></i>
+                        <h5 class="pt-2">{{card.title}}</h5>
+                        <p class="pt-2">{{card.paragraph}}</p>
+                    </div>
+                </div>
             </div>
         </div>
         
     </section>
+        
 </template>
 
 <script>
@@ -22,21 +29,21 @@ export default {
                     icon: 'fa-earth-europe',
                     title: 'WorldWide Recognize',
                     paragraph: 'Our Online course certificates can be used around the world and also in most popular univesities and companies.',
-                    img: require('@/assets/images/'),
+                    img: require('@/assets/images/connections.jpg'),
                     subtitle: ''
                 },
                 {
                     icon: 'fa-display',
                     title: 'Mostly Online Learning',
                     paragraph: 'Masterstudy online certificates can be obtained in a range of specialized areas and typically take about a year to complete.',
-                    img: require('@/assets/images/'),
+                    img: require('@/assets/images/codee.png'),
                     subtitle: ''
                 },
                 {
                     icon: 'fa-calendar',
                     title: 'Graduate in as little as 1 Year',
                     paragraph: 'Online post-graduate certificates are a popular way to develop your professional qualifications of Masterstudy.',
-                    img: require('@/assets/images/'),
+                    img: require('@/assets/images/chess.jpg'),
                     subtitle: ''
                 },
             ]
@@ -51,44 +58,68 @@ export default {
     .eb_width_section{
         width: 65vw;
         margin-inline: auto;
-        .eb_card{
-            background-color: $bg-card-input;
-            width: 32%;
-            i{
-                color: $color-fantastic;
-            }
+        i{
+            color: white;
         }
-    }
-    .rotate-diagonal-1:hover{
-        -webkit-animation: rotate-diagonal-1 1s linear both;
-                animation: rotate-diagonal-1 1s linear both;
-    }
-    @-webkit-keyframes rotate-diagonal-1 {
-        0% {
-            -webkit-transform: rotate3d(1, 1, 0, 0deg);
-                    transform: rotate3d(1, 1, 0, 0deg);
+        .box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            cursor: pointer;
         }
-        50% {
-            -webkit-transform: rotate3d(1, 1, 0, -180deg);
-                    transform: rotate3d(1, 1, 0, -180deg);
+
+        .box .body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 0.9s ease;
         }
-        100% {
-            -webkit-transform: rotate3d(1, 1, 0, -360deg);
-                    transform: rotate3d(1, 1, 0, -360deg);
+
+        .box .body .imgContainer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
         }
+
+        .box .body .imgContainer img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        @keyframes rotate-diagonal-1 {
-        0% {
-            -webkit-transform: rotate3d(1, 1, 0, 0deg);
-                    transform: rotate3d(1, 1, 0, 0deg);
+
+        .box .body .content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
         }
-        50% {
-            -webkit-transform: rotate3d(1, 1, 0, -180deg);
-                    transform: rotate3d(1, 1, 0, -180deg);
+
+        .box:hover .body{
+            transform: rotateY(180deg);
         }
-        100% {
-            -webkit-transform: rotate3d(1, 1, 0, -360deg);
-                    transform: rotate3d(1, 1, 0, -360deg);
+
+        .box .body .content div{
+            transform-style: preserve-3d;
+            padding: 20px;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4D759D 100%);
+            transform: translateZ(100px);
         }
     }
 
