@@ -2,7 +2,7 @@
     <section class="px-1 pb-4 eb_width_section m-auto d-flex justify-content-between">
         <div v-for="card in cards" :key="card.id" class="col-4 eb_card px-5 py-2">
             <i :class="['fa-solid', 'fa-3x', card.icon]" class="pt-2" ></i>
-            <h4 class="pt-2">{{card.title}}</h4>
+            <h5 class="pt-2">{{card.title}}</h5>
             <p class="pt-2">{{card.paragraph}}</p>
         </div>
     </section>

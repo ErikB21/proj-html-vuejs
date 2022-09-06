@@ -38,13 +38,13 @@
                     <span>CATEGORY</span>
                 </label>
                 <input id="textCourses" type="text" class="border-0 ms-1 eb_wid_inp">
-                <span class="bg-primary input-group-text"><i class="fa-solid fa-search text-white"></i></span>
+                <span class="bg-primary border-0 rounded-0 input-group-text"><i class="fa-solid fa-search text-white"></i></span>
             </div>
             <div class="list d-flex align-items-center">
                 <ListLogin/>
             </div>
             <div class="d-flex align-items-center">
-                <button class="btn btn-primary mb-3 mx-4">SIGN-UP</button>
+                <button class="btn btn-primary rounded-5 mb-3 mx-4">SIGN-UP</button>
                 <i class="fa-regular fa-bookmark mb-3"></i>
             </div>    
         </div>

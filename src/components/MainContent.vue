@@ -2,16 +2,7 @@
     <main class="container-fluid px-0">
 
         <!-- section start investing in you -->
-        <div class="d-flex eb_width_section m-auto align-items-center pt-5 pb-5">
-            <div>
-                <h2>Start Investing in You</h2>
-                <p>With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</p>
-                <button class="btn btn-primary">JOIN FOR FREE</button>
-            </div>
-            <div>
-                <img src="../assets/images/base.png" alt="">
-            </div>
-        </div>
+        <ComponentInitMain/>
 
         <!-- componente card delle certificazioni -->
         <CardCertificate/>
@@ -24,7 +15,7 @@
             <div class="eb_width_section mx-auto">
                 <h2>Limitless learning, more possibilities</h2>
                 <p>Online courses open the opportunity for learning to almost anyone, regardless of their sheduling commitments.</p>
-                <button class="btn btn-primary">READ MORE</button>
+                <button class="btn btn-primary rounded-5 ">READ MORE</button>
             </div>
         </div>
 
@@ -38,7 +29,7 @@
             <!-- componente sezione corsi recenti (card)  -->
             <CardRecentCourses/>
             <div class="text-center">
-                <button class="btn btn-primary my-5">SHOW ALL</button>
+                <button class="btn btn-primary rounded-5 my-5">SHOW ALL</button>
             </div>
         </div>
 
@@ -46,7 +37,7 @@
         <ComponentWeProud/>
 
         <!-- sezione subscribe -->
-        <div class="container-fluid eb_bg_color text-white pt-5 pb-3">
+        <div class="container-fluid eb_bg_color text-white py-5">
             <div class="eb_width_subscribe row m-auto justify-content-center align-items-center">
                 <div class="col-6">
                     <h4>Subscribe our newsletter</h4>
@@ -56,7 +47,7 @@
                     <label for="basic-url" class="form-label">YOUR E-MAIL ADDRESS</label>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                        <span class="bg-primary text-white border-0 input-group-text" id="basic-addon3">SUBSCRIBE</span>
+                        <span class="bg-primary text-white rounded-0 border-0 input-group-text" id="basic-addon3">SUBSCRIBE</span>
                     </div>
                 </div>
             </div>
@@ -90,17 +81,26 @@ import ComponentWeProud from './ComponentWeProud.vue';
 import ComponentPopularCourses from './ComponentPopularCourses.vue';
 import SquareBusiness from './SquareBusiness.vue';
 import ComponentEndMain from './ComponentEndMain.vue';
+import ComponentInitMain from './ComponentInitMain.vue';
 export default {
     name: "MainContent",
-    components: { CardCertificate, ComponentPhotoCourses, ListRecentCourse, CardRecentCourses, ComponentWeProud, ComponentPopularCourses, SquareBusiness, ComponentEndMain }
+    components: {
+    CardCertificate,
+    ComponentPhotoCourses,
+    ListRecentCourse,
+    CardRecentCourses,
+    ComponentWeProud,
+    ComponentPopularCourses,
+    SquareBusiness,
+    ComponentEndMain,
+    ComponentInitMain
+}
 }
 </script>
 
 <style scoped lang="scss">
     @import '../style/vars.scss';
-    .eb_width_section{
-        width: 65vw;
-    }
+    
     .bg_personal{
         height: 400px;
         background-image: url('../assets/images/Untitled-1-1-1-1-1.png');
@@ -108,9 +108,16 @@ export default {
         background-repeat: no-repeat;
         background-size: 100%;
         margin: 0 0 30px;
-        h2, p{
-            width: 340px;
+        .eb_width_section{
+            width: 65vw;
+            h2, p{
+                width: 340px;
+            }
+            p{
+                color:$color-gray-text;
+            }
         }
+        
     }  
     .eb_bg_color{
         background-color: $bg-section-2;
@@ -120,6 +127,9 @@ export default {
     }
     .eb_bg_section_3{
         background-color: $bg-section;
+        p{
+            color:$color-gray-text;
+        }
         i{
             color: $color-gray-text;
         }

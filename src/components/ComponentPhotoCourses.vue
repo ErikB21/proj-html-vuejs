@@ -4,7 +4,7 @@
             <div class="col-8 d-flex pe-3 flex-column my_sec_img align-self-center">
                 <img src="../assets/images/cat_1-1540x750.jpg" alt="">
                 <div class="d-flex justify-content-between align-items-center">
-                    <span>Software Development</span>
+                    <span class="text-dark">Software Development</span>
                     <span>5 courses</span>
                 </div>
             </div>
@@ -12,14 +12,14 @@
                 <div class="d-flex flex-column">
                     <img src="../assets/images/cat_2-370x155.jpg" alt="">
                     <div class="d-flex justify-content-between align-items-center">
-                        <span>Art</span>
+                        <span class="text-dark">Art</span>
                         <span>8 courses</span>
                     </div>
                 </div>
                 <div class="d-flex flex-column">
                     <img src="../assets/images/cat_3-370x155.jpg" alt="">   
                 <div class="d-flex justify-content-between align-items-center">
-                    <span>Material Design</span>
+                    <span class="text-dark">Material Design</span>
                     <span>5 courses</span>
                 </div>
             </div>
@@ -29,7 +29,7 @@
         <div v-for="photo in photosList" :key="photo.id" class="col-4 my_sec_img2">
             <img :src="photo.img" :alt="photo.text">
             <div class="d-flex justify-content-between align-items-center">
-                <span>{{photo.text}}</span>
+                <span class="text-dark">{{photo.text}}</span>
                 <span>{{photo.course}}</span>
             </div>
         </div>
@@ -77,25 +77,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .my_sec_img{
-        width: 66.6%;
-        img{
-            width: 100%;
-            height: 100%;
+    @import '../style/vars.scss';
+    .eb_width_section{
+        width: 65vw;
+        .my_sec_img{
+            width: 66.6%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
-    }
-    .my_sec_img2{
-        width: calc(100% / 3 - 4px);
-        margin: 0 2px;
-        // div:first-of-type{
-        //     margin-bottom: 4px;
-        // }
-        // &:nth-of-type(3){
-        //     margin-right: 2px;    
-        // }
+        .my_sec_img2{
+            width: calc(100% / 3 - 4px);
+            margin: 0 2px;
+            // div:first-of-type{
+            //     margin-bottom: 4px;
+            // }
+            // &:nth-of-type(3){
+            //     margin-right: 2px;    
+            // }
 
-        img{
-            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        span{
+            color:$color-gray-text;
         }
     }
+    
 </style>

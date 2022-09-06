@@ -1,9 +1,9 @@
 <template>
     <ul class="d-flex justify-content-between list-unstyled">
-        <li class="px-1" v-for="login in logins" :key="login.id">
+        <li class="px-2" v-for="login in logins" :key="login.id">
             <a class="text-decoration-none text-dark" href="#">
-                <i :class="login.icon"></i>
-                <span class="ps-2">{{login.link}}</span>
+                <i class="text-primary" :class="login.icon"></i>
+                <span class="ps-1">{{login.link}}</span>
             </a>
         </li>
     </ul>
@@ -34,5 +34,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

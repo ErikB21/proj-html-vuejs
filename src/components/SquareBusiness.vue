@@ -5,7 +5,7 @@
                 <div class="px-2">
                     <img :src="item.img" :alt="item.title">
                 </div>
-                <div>
+                <div class="ps-2">
                     <h3 class="py-2">{{item.title}}</h3>
                     <p class="py-2">{{item.text}}</p>
                     <button class="btn btn-primary">{{item.buttonText}}</button>
@@ -39,6 +39,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    @import '../style/vars.scss';
+    p{
+        color: $color-gray-text;
+    }
 </style>

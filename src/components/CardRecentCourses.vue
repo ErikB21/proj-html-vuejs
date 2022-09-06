@@ -8,7 +8,7 @@
             </div>
             <div class="pt-2 border-top card-body d-flex justify-content-between mb-2">
                 <p>{{card.date}}</p>
-                <p>{{card.cost}}</p>
+                <p class="text-dark fw-bold">{{card.cost}}</p>
             </div>
         </div>
     </div>
@@ -112,11 +112,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
     .all_card{
         width: 100%;
         .card{
             width: calc(100% / 6 - 10px)!important;
             margin: 5px;
+            span, p{
+                color: $color-gray-text;
+            }
         }
     }
 </style>

@@ -52,9 +52,15 @@ export default {
         background-color: $bg_section;
         .eb_width{
             width: 60%;
+            p{
+                color: $color-gray-text;
+            }
         }
         ul li:last-child{
             border: none!important;
+        }
+        span{
+            color: $color-gray-text;
         }
     }
 </style>
