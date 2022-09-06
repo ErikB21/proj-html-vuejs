@@ -16,7 +16,7 @@
                 <div class="d-flex align-items-center">
                     <ul class="d-flex list-unstyled pt-3 px-1 align-items-center">
                         <li class="px-2" v-for="icon in icons" :key="icon.id">
-                            <i class="eb_color" :class="['fa-brands', icon.name]"></i>
+                            <a class="eb_color hvr-icon-sink-away"  href=""><i class=" hvr-icon" :class="['fa-brands', icon.name]"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -28,20 +28,22 @@
             <div class="px-2">
                 <img src="../assets/images/MasterStudy_logo.svg" alt="">
             </div>
-            
-            <div class="d-flex pb-2 px-2 align-items-center">
-                <label class="d-flex align-items-center" for="textCourses">
-                    <i class="px-1 fa-solid fa-bars"></i>
-                    <span>CATEGORY</span>
-                </label>
-                <input id="textCourses" type="text" class="border-0 ms-1 eb_wid_inp">
-                <span class="bg-primary border-0 rounded-0 input-group-text"><i class="fa-solid fa-search text-white"></i></span>
+
+            <div>
+                <form class="d-flex pb-2 px-2 align-items-center" action="">
+                    <label class="d-flex align-items-center px-1" for="textCourses">
+                        <i class="px-1 fa-solid fa-bars"></i>
+                        <span>CATEGORY</span>
+                    </label>
+                    <input id="textCourses" type="text" placeholder="Search Courses" class="rounded-0 border-0 input-group-text ms-1 eb_wid_inp">
+                    <span class="bg_blues btn border-0 rounded-0 input-group-text"><i class="fa-solid fa-search text-white"></i></span>
+                </form>
             </div>
 
             <ListLogin/>
 
             <div class="d-flex align-items-center">
-                <button class="btn btn-primary rounded-5 mb-3 mx-4">SIGN-UP</button>
+                <button class="btn btn-three mb-3 mx-4">SIGN-UP</button>
                 <i class="fa-regular fa-bookmark mb-3"></i>
             </div>    
         </div>
@@ -101,7 +103,28 @@ export default {
     }
     .eb_wid_inp{
         width: 400px!important;
+        text-align: left;
         background-color: $bg-card-input;
+        outline-color: $color-fantastic;
     }
-
+    .btn-three {
+        color: $color-fantastic;
+        background-color: white;
+        outline: 1px solid $color-fantastic;
+        &:hover{
+            color: white;
+            background-color: $color-fantastic;
+            outline: none;
+        }
+    }
+    .bg_blues{
+        background-color: $color-fantastic;
+        &:hover{
+            background-color: white;
+            outline: 1px solid $color-fantastic;
+            i{
+                color: $color-fantastic !important;
+            }
+        }
+    }
 </style>

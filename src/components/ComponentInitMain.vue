@@ -3,7 +3,7 @@
         <div>
             <h2>Start Investing in You</h2>
             <p>With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</p>
-            <button class="btn btn-primary rounded-5">JOIN FOR FREE</button>
+            <button class="btn btn-three text-light rounded-5">JOIN FOR FREE</button>
         </div>
         <div class="position-relative">
             <img src="../assets/images/base.png" alt="">
@@ -23,8 +23,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
     .eb_width_section{
         width: 65vw;
+        .btn-three{
+            background-color: $color-fantastic;
+        }
         .eb_pos_1{
             position: absolute;
             top: 21%;

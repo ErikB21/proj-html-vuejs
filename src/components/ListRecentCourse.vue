@@ -1,7 +1,7 @@
 <template>
     <ul class="cl-effect-1 list-unstyled d-flex justify-content-center align-items-center">
         <li class="rounded-5 p-2" :class="link.active ? 'active':'' " v-for="link in links" :key="link.id">
-            <a class="text-decoration-none" :href="link.url">{{link.name}}</a>
+            <a class="text-decoration-none text-dark" :href="link.url">{{link.name}}</a>
         </li>
     </ul>
 </template>
@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
     .cl-effect-1 a::before,
     .cl-effect-1 a::after {
         display: inline-block;
@@ -65,7 +66,8 @@ export default {
 
     .cl-effect-1 a::before {
         margin-right: 10px;
-        content: '[';
+        content: '<';
+        color: $color-fantastic;
         -webkit-transform: translateX(20px);
         -moz-transform: translateX(20px);
         transform: translateX(20px);
@@ -73,7 +75,8 @@ export default {
 
     .cl-effect-1 a::after {
         margin-left: 10px;
-        content: ']';
+        content: '/>';
+        color: $color-fantastic;
         -webkit-transform: translateX(-20px);
         -moz-transform: translateX(-20px);
         transform: translateX(-20px);

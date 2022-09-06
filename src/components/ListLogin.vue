@@ -3,7 +3,7 @@
         <ul class="d-flex justify-content-between list-unstyled">
             <li class="px-2" v-for="login in logins" :key="login.id">
                 <a class="text-decoration-none text-dark" href="#">
-                    <i class="text-primary" :class="login.icon"></i>
+                    <i :class="login.icon"></i>
                     <span class="ps-1">{{login.link}}</span>
                 </a>
             </li>
@@ -37,4 +37,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
+    i{
+        color: $color-fantastic;
+    }
 </style>
