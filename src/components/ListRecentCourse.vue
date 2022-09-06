@@ -1,7 +1,7 @@
 <template>
-    <ul class="list-unstyled d-flex justify-content-center align-items-center">
-        <li class="px-2" v-for="link in links" :key="link.id">
-            <a class="text-decoration-none" href="">{{link.name}}</a>
+    <ul class="cl-effect-1 list-unstyled d-flex justify-content-center align-items-center">
+        <li class="rounded-5 p-2" :class="link.active ? 'active':'' " v-for="link in links" :key="link.id">
+            <a class="text-decoration-none" :href="link.url">{{link.name}}</a>
         </li>
     </ul>
 </template>
@@ -14,31 +14,38 @@ export default {
             links:[
                 {
                     name: 'All Categories',
-                    active: true
+                    active: true,
+                    url: '#'
                 },
                 {
                     name: 'Art',
-                    active: false
+                    active: false,
+                    url: '#'
                 },
                 {
                     name: 'Exercise',
-                    active: false
+                    active: false,
+                    url: '#'
                 },
                 {
                     name: 'Material Design',
-                    active: false
+                    active: false,
+                    url: '#'
                 },
                 {
                     name: 'Music',
-                    active: false
+                    active: false,
+                    url: '#'
                 },
                 {
                     name: 'Photography',
-                    active: false
+                    active: false,
+                    url: '#'
                 },
                 {
                     name: 'Software Development',
-                    active: false
+                    active: false,
+                    url: '#'
                 }
             ]
         }
@@ -46,6 +53,39 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+    }
 
+    .cl-effect-1 a::before {
+        margin-right: 10px;
+        content: '[';
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+
+    .cl-effect-1 a::after {
+        margin-left: 10px;
+        content: ']';
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+
+    .cl-effect-1 a:hover::before,
+    .cl-effect-1 a:hover::after,
+    .cl-effect-1 a:focus::before,
+    .cl-effect-1 a:focus::after {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+    }
 </style>

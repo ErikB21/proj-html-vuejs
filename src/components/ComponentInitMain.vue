@@ -3,7 +3,7 @@
         <div>
             <h2>Start Investing in You</h2>
             <p>With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</p>
-            <button class="btn btn-primary">JOIN FOR FREE</button>
+            <button class="btn btn-primary rounded-5">JOIN FOR FREE</button>
         </div>
         <div class="position-relative">
             <img src="../assets/images/base.png" alt="">
