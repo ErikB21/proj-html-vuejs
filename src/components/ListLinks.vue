@@ -1,6 +1,6 @@
 <template>
     <li class="px-3">
-        <a class="text-decoration-none text-dark" href="#">{{item}}</a>
+        <a class="text-decoration-none eb_color" href="#">{{item}}</a>
     </li>    
 </template>
 
@@ -13,6 +13,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    @import '../style/vars.scss';
+    .eb_color{
+        color: $color-gray-text;
+    }
 </style>

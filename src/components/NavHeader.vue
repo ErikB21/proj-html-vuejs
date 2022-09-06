@@ -4,7 +4,7 @@
     <nav>
         <div class="d-flex justify-content-between border-bottom align-items-center">
             <div class="flex-fill">
-                <select class="form-select eb_width border-light">
+                <select class="form-select eb_color eb_width border-light">
                     <option selected>Language</option>
                     <option value="1">English</option>
                     <option value="2">Italian</option>
@@ -20,7 +20,7 @@
                 <div class="d-flex align-items-center">
                     <ul class="d-flex list-unstyled pt-3 px-1 align-items-center">
                         <li class="px-2" v-for="icon in icons" :key="icon.id">
-                            <i :class="['fa-brands', icon.name]"></i>
+                            <i class="eb_color" :class="['fa-brands', icon.name]"></i>
                         </li>
                     </ul>
                 </div>
@@ -37,7 +37,7 @@
                     <i class="px-1 fa-solid fa-bars"></i>
                     <span>CATEGORY</span>
                 </label>
-                <input id="textCourses" type="text" class="ms-1 eb_wid_inp">
+                <input id="textCourses" type="text" class="border-0 ms-1 eb_wid_inp">
                 <span class="bg-primary input-group-text"><i class="fa-solid fa-search text-white"></i></span>
             </div>
             <div class="list d-flex align-items-center">
@@ -131,11 +131,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
+    .eb_color{
+        color: $color-gray-text;
+    }
     .eb_width{
         width: 150px;
     }
     .eb_wid_inp{
-        width: 500px!important;
+        width: 400px!important;
+        background-color: $bg-card-input;
     }
 
 </style>

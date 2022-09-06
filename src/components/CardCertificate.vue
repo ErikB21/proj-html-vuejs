@@ -36,11 +36,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../style/vars.scss';
+
     .eb_width_section{
         width: 65vw;
         margin-inline: auto;
         .eb_card{
-            background-color: antiquewhite;
+            background-color: $bg-card-input;
             width: 32%;
         }
     }

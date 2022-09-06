@@ -1,7 +1,7 @@
 <template>
     <ul class="list-unstyled d-flex justify-content-center align-items-center">
         <li class="px-2" v-for="link in links" :key="link.id">
-            <a class="text-decoration-none text-dark" href="">{{link.name}}</a>
+            <a class="text-decoration-none" href="">{{link.name}}</a>
         </li>
     </ul>
 </template>
