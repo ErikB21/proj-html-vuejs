@@ -1,3 +1,8 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~bootstrap/scss/bootstrap.scss';
 @import './vars.scss';
+@import '~@fontsource/assistant/400.css';
+
+body{
+    font-family: "Assistant", sans-serif;
+}

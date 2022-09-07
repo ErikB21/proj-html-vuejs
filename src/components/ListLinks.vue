@@ -2,7 +2,7 @@
     <div class="d-flex align-items-center">
         <ul class="cl-effect-13 d-flex list-unstyled pt-3 align-items-center">
             <li v-for="link in links" :key="link.id" class="cl-effect-13 px-3">
-                <a class="text-decoration-none eb_color" href="#">{{link.title}}</a>
+                <a class="text-decoration-none eb_color" :href="link.url">{{link.title}}</a>
                 <span class="new text-light p-1 rounded-2">{{link.new}}</span>
             </li> 
         </ul>
@@ -29,7 +29,7 @@ export default {
                     url: '#'
                 },
                 {
-                    title: 'Bundles',
+                    title: 'Bundless',
                     url: '#'
                 },
                 {

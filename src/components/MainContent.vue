@@ -15,7 +15,7 @@
             <div class="eb_width_section mx-auto">
                 <h2>Limitless learning, more possibilities</h2>
                 <p>Online courses open the opportunity for learning to almost anyone, regardless of their sheduling commitments.</p>
-                <button class="btn btn-primary rounded-5 ">READ MORE</button>
+                <button class="btn rounded-5 text-light">READ MORE</button>
             </div>
         </div>
 
@@ -115,6 +115,9 @@ export default {
             }
             p{
                 color:$color-gray-text;
+            }
+            button{
+                background-color: $color-fantastic;
             }
         }
         

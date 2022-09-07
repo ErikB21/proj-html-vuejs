@@ -8,7 +8,7 @@
                 <div class="content d-flex flex-column align-items-center justify-content-center">
                     <div>
                         <i :class="['fa-solid', 'fa-3x', card.icon]" class="pt-2" ></i>
-                        <h5 class="pt-2">{{card.title}}</h5>
+                        <h5 class="pt-2 fw-bold">{{card.title}}</h5>
                         <p class="pt-2">{{card.paragraph}}</p>
                     </div>
                 </div>

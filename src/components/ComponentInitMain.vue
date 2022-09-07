@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex eb_width_section m-auto align-items-center pt-5 pb-5">
+    <div class="d-flex eb_width_section m-auto align-items-center justify-content-center pt-5 pb-5">
         <div>
             <h2>Start Investing in You</h2>
             <p>With over 1200 courses in 18 subjects, you're guaranteed to find something that's right for you.</p>
