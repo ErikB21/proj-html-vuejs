@@ -3,6 +3,7 @@
         <ul class="cl-effect-13 d-flex list-unstyled pt-3 align-items-center">
             <li v-for="link in links" :key="link.id" class="cl-effect-13 px-3">
                 <a class="text-decoration-none eb_color" href="#">{{link.title}}</a>
+                <span class="new text-light p-1 rounded-2">{{link.new}}</span>
             </li> 
         </ul>
     </div>       
@@ -20,7 +21,8 @@ export default {
                 },
                 {
                     title: 'Zoom',
-                    url: '#'
+                    url: '#',
+                    new: 'NEW'
                 },
                 {
                     title: 'Pages',
@@ -36,7 +38,8 @@ export default {
                 },
                 {
                     title: 'Add Course',
-                    url: '#'
+                    url: '#',
+                    new: 'NEW'
                 },
                 {
                     title: 'Demo',
@@ -50,6 +53,17 @@ export default {
 
 <style scoped lang="scss">
     @import '../style/vars.scss';
+    
+    .cl-effect-13:nth-child(2) .new,
+    .cl-effect-13:nth-child(6) .new{
+        background-color: $color-square-hot;
+    }
+    .new{
+        position: absolute;
+        top: -11px;
+        right: 10px;
+        font-size: 0.5rem;
+    }
     
     .cl-effect-13{
         position: relative;

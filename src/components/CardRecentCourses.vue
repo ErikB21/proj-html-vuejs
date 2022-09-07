@@ -1,7 +1,8 @@
 <template>
     <div class="d-flex p-0 container all_card flex-wrap">
-        <div v-for="card in cards" :key="card.id" class="card">
+        <div v-for="card in cards" :key="card.id" class="card  position-relative">
             <img :src="card.img" class="card-img-top" :alt="card.name">
+            <span class="new text-light p-1 rounded-2">{{card.new}}</span>
             <div class="p-2 card-body d-flex flex-column">
                 <span class="pb-3">{{card.course}}</span>
                 <h6 class="card-title">{{card.name}}</h6>
@@ -33,21 +34,24 @@ export default {
                     course: 'Art >',
                     name: 'Real Things Art Painting by Jason Ni',
                     date: '6 hours',
-                    cost: '$45'
+                    cost: '$45',
+                    new: 'NEW'
                 },
                 {
                     img: require('@/assets/images/course-preview-544x322.jpg'),
                     course: 'Software Development >',
                     name: 'Basics of Masterstudy',
                     date: '6 hours',
-                    cost: 'Free'
+                    cost: 'Free',
+                    new: 'HOT'
                 },
                 {
                     img: require('@/assets/images/photo-1496307042754-b4aa456c4a2d-544x322.jpeg'),
                     course: 'Electronic',
                     name: 'How to be a DJ? Make Electronic Music',
                     date: '6 hours',
-                    cost: '$49'
+                    cost: '$49',
+                    new: 'SPECIAL'
                 },
                 {
                     img: require('@/assets/images/photo-1416339134316-0e91dc9ded92-scaled-544x322.jpeg'),
@@ -89,14 +93,16 @@ export default {
                     course: 'Nvidia >',
                     name: 'Nvidia and UE4 Technologies Practice',
                     date: '6 hours',
-                    cost: 'Free'
+                    cost: 'Free',
+                    new: 'SPECIAL'
                 },
                 {
                     img: require('@/assets/images/jakob-owens-198234-unsplash-min-1-544x322.png'),
                     course: 'Art >',
                     name: 'How to Work with Legendary RED camera?',
                     date: '6 hours',
-                    cost: 'Free'
+                    cost: 'Free',
+                    new: 'SPECIAL'
                 },
                 {
                     img: require('@/assets/images/promo_tf-544x322.jpg'),
@@ -118,6 +124,24 @@ export default {
         .card{
             width: calc(100% / 6 - 10px)!important;
             margin: 5px;
+            &:nth-child(2) .new{
+                background-color: $color-square-new;
+            }
+            &:nth-child(3) .new{
+                background-color: $color-square-hot;
+            }
+            &:nth-child(4) .new,
+            &:nth-child(10) .new,
+            &:nth-child(11) .new{
+                background-color: $color-square-special;
+            }
+            
+            .new{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                font-size: 0.8rem;
+            }
             span, p{
                 color: $color-gray-text;
             }

@@ -20,27 +20,27 @@ export default {
                 {
                     name: 'Art',
                     active: false,
-                    url: '#'
+                    url: '#',
                 },
                 {
                     name: 'Exercise',
                     active: false,
-                    url: '#'
+                    url: '#',
                 },
                 {
                     name: 'Material Design',
                     active: false,
-                    url: '#'
+                    url: '#',
                 },
                 {
                     name: 'Music',
                     active: false,
-                    url: '#'
+                    url: '#',
                 },
                 {
                     name: 'Photography',
                     active: false,
-                    url: '#'
+                    url: '#',
                 },
                 {
                     name: 'Software Development',
@@ -55,6 +55,7 @@ export default {
 
 <style scoped lang="scss">
     @import '../style/vars.scss';
+    
     .cl-effect-1 a::before,
     .cl-effect-1 a::after {
         display: inline-block;
